@@ -1,4 +1,4 @@
-import { Injectable, Injector, Inject, OpaqueToken } from '@angular/core';
+import { Injectable, Injector, Inject, InjectionToken } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 
 import { CookieOptions } from './cookie-options.model';
