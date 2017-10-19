@@ -17,9 +17,6 @@ export class CookieOptionsProvider {
               private _injector: Injector) {
     this.defaultOptions = {
       path: this._injector.get(APP_BASE_HREF, '/'),
-      domain: null,
-      expires: null,
-      secure: false
     };
     this._options = mergeOptions(this.defaultOptions, options);
   }

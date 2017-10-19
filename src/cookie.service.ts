@@ -158,15 +158,15 @@ export class CookieService implements ICookieService {
   private _cookieWriter() {
     let that = this;
 
-    return function (name: string, value: string, options?: CookieOptions) {
+    return function (name: string, value: string|undefined, options?: CookieOptions) {
       that.cookieString = that._buildCookieString(name, value, options);
     };
   }
 
-  private _buildCookieString(name: string, value: string, options?: CookieOptions): string {
+  private _buildCookieString(name: string, value: string|undefined, options?: CookieOptions): string {
     let opts: CookieOptions = mergeOptions(this.options, options);
     let expires: any = opts.expires;
-    if (isBlank(value)) {
+    if (isString(value)) {
       expires = 'Thu, 01 Jan 1970 00:00:00 GMT';
       value = '';
     }
