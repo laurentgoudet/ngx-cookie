@@ -4,7 +4,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { CookieOptions } from './cookie-options.model';
 import { mergeOptions } from './utils';
 
-export const COOKIE_OPTIONS = new OpaqueToken('COOKIE_OPTIONS');
+export const COOKIE_OPTIONS = new InjectionToken<CookieOptions>('COOKIE_OPTIONS');
 
 /** @private */
 @Injectable()
