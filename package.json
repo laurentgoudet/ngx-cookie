@@ -9,6 +9,8 @@
     "test-watch": "karma start --singleRun=false --autoWatch=true",
     "prepublishOnly": "ngc && npm run build",
     "build": "webpack",
+    "build": "webpack && npm run build:fesm",
+    "build:fesm": "ngc -p tsconfig.lib.json && rollup --output.format=es --output.file bundles/ngx-cookie.js --globals '@angular/core:ng.core,@angular/common:ng.common' build-es2015/ngx-cookie.js && rm -rf build-es2015",
     "commit": "npm run prepublish && npm test && git-cz"
   },
   "repository": {
@@ -38,7 +40,7 @@
     "url": "https://github.com/salemdar/ngx-cookie/issues"
   },
   "main": "bundles/ngx-cookie.umd.js",
-  "module": "index.js",
+  "module": "bundles/ngx-cookie.js",
   "typings": "index.d.ts",
   "peerDependencies": {
     "@angular/core": ">=4.0.0 || >=5.0.0",
@@ -73,6 +75,7 @@
     "loader-utils": "1.1.0",
     "reflect-metadata": "0.1.10",
     "rimraf": "2.6.2",
+    "rollup": "^0.52.0",
     "rxjs": "5.5.2",
     "source-map-loader": "0.2.3",
     "ts-helpers": "1.1.2",

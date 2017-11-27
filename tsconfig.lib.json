@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./build-es2015/",
+    "target": "es2015"
+  },
+  "files": [
+    "index.ts"
+  ],
+  "angularCompilerOptions": {
+    "flatModuleOutFile": "ngx-cookie.js",
+    "flatModuleId": "ngx-cookie"
+  }
+}
+
