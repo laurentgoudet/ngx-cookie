@@ -18,6 +18,7 @@ yarn-error.log
 !examples/**/*.js
 coverage
 *.metadata.json
+bundles
 
 #################
 ## JetBrains
