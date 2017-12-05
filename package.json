@@ -7,9 +7,8 @@
     "clean-build": "npm run clean && npm run build && npm test && npm run prepublish",
     "test": "karma start",
     "test-watch": "karma start --singleRun=false --autoWatch=true",
-    "prepublish": "ngc && npm run build",
-    "build": "webpack && npm run build:fesm",
-    "build:fesm": "ngc -p tsconfig.lib.json && rollup --output.format=es --output.file bundles/ngx-cookie.js --globals '@angular/core:ng.core,@angular/common:ng.common' dist/ngx-cookie.js",
+    "prepublish": "npm run build",
+    "build": "webpack && ngc && rollup -c",
     "commit": "npm run prepublish && npm test && git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
