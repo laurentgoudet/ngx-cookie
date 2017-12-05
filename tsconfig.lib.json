@@ -9,7 +9,7 @@
   ],
   "angularCompilerOptions": {
     "flatModuleOutFile": "ngx-cookie.js",
-    "flatModuleId": "ngx-cookie"
+    "flatModuleId": "@laurentgoudet/ngx-cookie"
   }
 }
 
