@@ -73,6 +73,7 @@
     "loader-utils": "1.1.0",
     "reflect-metadata": "0.1.10",
     "rimraf": "2.6.2",
+    "rollup": "^0.52.1",
     "rxjs": "5.5.2",
     "source-map-loader": "0.2.3",
     "ts-helpers": "1.1.2",
