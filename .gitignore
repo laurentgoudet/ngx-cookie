@@ -19,6 +19,7 @@ yarn-error.log
 coverage
 *.metadata.json
 bundles
+dist
 
 #################
 ## JetBrains
