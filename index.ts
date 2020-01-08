@@ -21,7 +21,7 @@ export class CookieModule {
    * @param {CookieOptions} options
    * @returns {ModuleWithProviders}
    */
-  static forRoot(options: CookieOptions = {}): ModuleWithProviders {
+  static forRoot(options: CookieOptions = {}): ModuleWithProviders<CookieModule> {
     return {
       ngModule: CookieModule,
       providers: [
@@ -36,7 +36,7 @@ export class CookieModule {
    * @param {CookieOptions} options
    * @returns {ModuleWithProviders}
    */
-  static forChild(options: CookieOptions = {}): ModuleWithProviders {
+  static forChild(options: CookieOptions = {}): ModuleWithProviders<CookieModule> {
     return {
       ngModule: CookieModule,
       providers: [
